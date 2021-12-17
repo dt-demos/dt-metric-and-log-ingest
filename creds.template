@@ -1,0 +1,4 @@
+{
+    "DT_BASE_URL": "<e.g. XXXXX.live.dynatrace.com>",
+    "DT_API_TOKEN": "<your dynatrace API token>"
+}

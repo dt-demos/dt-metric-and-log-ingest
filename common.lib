@@ -1,0 +1,9 @@
+CREDS_FILE=creds.json
+
+if ! [ -f "$CREDS_FILE" ]; then
+    echo "ABORTING: missing $CREDS_FILE credential json file"
+    exit 1
+fi
+
+DT_BASE_URL=$(cat $CREDS_FILE | jq -r '.DT_BASE_URL')
+DT_API_TOKEN=$(cat $CREDS_FILE | jq -r '.DT_API_TOKEN')
