@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # HOSTNAME and PORT are optional arguments
-# if not passed in, then an OneAgent on localhost and port 18125 iss assumed 
+# if not passed in, then an OneAgent on localhost and port 18125 is assumed 
 # Here is an example to pass in the Public IP and port for the ActiveGate 
 # ./sendstatsd.sh 111.222.333.444 18126
 

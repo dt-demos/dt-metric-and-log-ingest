@@ -5,8 +5,10 @@ source ./common.lib
 
 # GATEWAY_URL is optional argument
 # if ignore this argument, then it uses the Public DT API
-# example to an ActiveGate
+# Base URL to an ActiveGate is https://{your-activegate-domain}:9999/e/{your-environment-id}
+# example usage with an ActiveGate argument
 # ./sendlogs.sh https://111.222.333.444:9999/e/dyk71272
+
 GATEWAY_URL=$1
 
 if [ -z "${GATEWAY_URL}" ]; then
