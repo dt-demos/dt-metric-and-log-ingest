@@ -33,10 +33,10 @@ do
   -H 'Authorization: Api-Token '$DT_API_TOKEN' ' \
   -d '[
     {
-     "attribute-a": "Custom Log Message '$loop'",
-     "attribute-b": "'$loop'",
-     "attribute-c": "Log level '$level' Loop '$loop'",    
-     "attribute-d": "'$level'"
+     "attribute_a": "Custom Log Message '$loop'",
+     "attribute_b": "'$loop'",
+     "attribute_c": "Log level '$level' Loop '$loop'",    
+     "attribute_d": "'$level'"
     }
    ]'
 done

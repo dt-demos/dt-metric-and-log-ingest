@@ -38,5 +38,5 @@ Summary by log level
 ```
 fetch logs
 | filter matchesValue(content, "*Custom Log Message*")
-| summarize count(),by:{`attribute-d`}
+| summarize count(),by:{attribute_d}
 ```
