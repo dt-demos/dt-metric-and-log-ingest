@@ -26,24 +26,19 @@ do
     level="info"
   fi
 
-  if [ $(expr $loop % 2) == "0" ]; then
-    name="myservice1"
-  else
-    name="myservice2"
-  fi
-
-  echo "loop #: $loop Sending log for $name, $level"
+  echo "loop #: $loop Sending log level $level"
   curl -k -X POST \
   ${DT_API_URL}/api/v2/logs/ingest \
   -H 'Content-Type: application/json; charset=utf-8' \
   -H 'Authorization: Api-Token '$DT_API_TOKEN' ' \
   -d '[
     {
-    "content": "Custom Log Message '$loop'",
-    "level": "none",
-    "severity": "'$level'",
-    "service.name": "'$name'",
-    "service.namespace": "mynamespace"
+     "attribute-a": "Custom Log Message '$loop'",
+     "attribute-b": "'$loop'",
+     "attribute-c": "Log level '$level' Loop '$loop'",    
+     "attribute-d": "'$level'"
     }
    ]'
 done
+
+

@@ -22,6 +22,21 @@ The examples below require the following:
 
 1. Once the `creds.json` is updated, the run the `sendlogs.sh` script.  See the comments in the for usage details.
 
-1. View the logs within the `Observe and explore -> Logs` page within Dynatrace as shown below.
+1. View the logs within the `Logs App` within Dynatrace as shown below.
 
     ![image](images/logview.png)
+
+1. Validate with DQL
+
+See all rows
+```
+fetch logs
+| filter matchesValue(content, "*Custom Log Message*")
+```
+
+Summary by log level
+```
+fetch logs
+| filter matchesValue(content, "*Custom Log Message*")
+| summarize count(),by:{`attribute-d`}
+```
